@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adham Nasser Wahba | Data Analyst</title>
+<meta name="description" content="Data Analysis student working with Excel, SQL, Python and Power BI to turn raw data into clear insights.">
+<meta property="og:title" content="Adham Nasser Wahba | Data Analyst">
+<meta property="og:description" content="Turning raw data into meaningful insights.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0f14;--bg2:#121820;--card:#161d27;--line:#243040;--tx:#e8edf3;--mut:#93a1b3;--ac:#2dd4a7;--ac2:#5b8cff;--r:16px;--font:'Sora','Cairo',system-ui,sans-serif}
+[data-theme=light]{--bg:#f6f8fb;--bg2:#eaeff5;--card:#fff;--line:#d8e0ea;--tx:#101722;--mut:#546174;--ac:#0a9b78;--ac2:#2f5fe0}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--tx);font-family:var(--font);line-height:1.7;overflow-x:hidden}
+[dir=rtl] body{font-family:'Cairo',var(--font)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+section{padding:88px 0}
+h1,h2,h3{line-height:1.2}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px}
+.eyebrow{color:var(--ac);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+[dir=rtl] .eyebrow{letter-spacing:0}
+.sub{color:var(--mut);max-width:620px;margin-bottom:36px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;border:1px solid var(--line);background:transparent;color:var(--tx);cursor:pointer;font:inherit;font-weight:600;transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--ac)}
+.btn.pri{background:var(--ac);color:#04130e;border-color:var(--ac)}
+.btn[aria-disabled=true]{opacity:.5;pointer-events:none}
+/* nav */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:700}.logo span{color:var(--ac)}
+.links{display:flex;gap:6px;align-items:center}
+.links a.l{padding:8px 12px;border-radius:8px;color:var(--mut);font-size:.92rem}
+.links a.l:hover,.links a.l.act{color:var(--tx);background:var(--bg2)}
+.tools{display:flex;gap:8px;align-items:center}
+.ib{min-width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--tx);cursor:pointer;font:inherit;font-size:.85rem}
+#burger{display:none}
+@media(max-width:860px){
+ #burger{display:block}
+ .links{position:absolute;top:64px;inset-inline:0;flex-direction:column;align-items:stretch;background:var(--bg);padding:12px 20px 20px;border-bottom:1px solid var(--line);display:none}
+ .links.open{display:flex}
+ .links a.l{padding:12px}
+ .cta-nav{display:none}
+}
+/* hero */
+.hero{padding-top:140px;min-height:100vh;display:flex;align-items:center;position:relative}
+.hero::before{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--ac) 22%,transparent),transparent 70%);top:60px;inset-inline-end:-120px;z-index:-1}
+.hgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+@media(max-width:860px){.hgrid{grid-template-columns:1fr}.photo-wrap{order:-1;max-width:260px}}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--card);padding:6px 14px;border-radius:999px;font-size:.82rem;color:var(--mut);margin-bottom:20px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ac);box-shadow:0 0 0 4px color-mix(in srgb,var(--ac) 25%,transparent)}
+h1{font-size:clamp(2.2rem,6vw,3.8rem);letter-spacing:-.02em}
+.role{font-size:clamp(1.1rem,2.6vw,1.5rem);color:var(--ac);margin:12px 0 16px;min-height:2rem;transition:opacity .35s}
+.role.f{opacity:0}
+.intro{color:var(--mut);max-width:560px;margin-bottom:28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.soc{display:flex;flex-wrap:wrap;gap:10px}
+.soc a{padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;color:var(--mut)}
+.soc a:hover{color:var(--tx);border-color:var(--ac)}
+.photo{aspect-ratio:4/5;border-radius:28px 28px 120px 28px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(145deg,var(--card),var(--bg2));display:grid;place-items:center;position:relative;transition:transform .4s}
+[dir=rtl] .photo{border-radius:28px 28px 28px 120px}
+.photo:hover{transform:rotate(-1.5deg) scale(1.02)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.ph{text-align:center;color:var(--mut);font-size:.8rem;padding:16px}
+.ph b{display:block;font-size:3rem;color:var(--ac);margin-bottom:6px}
+.scroll{position:absolute;bottom:24px;inset-inline-start:50%;width:22px;height:36px;border:2px solid var(--line);border-radius:12px}
+.scroll::after{content:"";position:absolute;top:6px;left:50%;width:4px;height:7px;margin-left:-2px;border-radius:2px;background:var(--ac);animation:sc 1.6s infinite}
+@keyframes sc{50%{transform:translateY(10px);opacity:.3}}
+/* about */
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:860px){.agrid{grid-template-columns:1fr}}
+.agrid p{color:var(--mut);margin-bottom:14px}
+.facts{display:grid;gap:12px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.fact small{color:var(--ac);display:block;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+[dir=rtl] .fact small{letter-spacing:0}
+/* skills */
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.sk{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.sk h3{font-size:1.05rem;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.82rem;padding:5px 12px;border-radius:999px;background:var(--bg2);border:1px solid var(--line);color:var(--mut)}
+.sk .chip.main{color:var(--tx);border-color:var(--ac)}
+/* projects */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filters button{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mut);cursor:pointer;font:inherit;font-size:.88rem}
+.filters button[aria-pressed=true]{background:var(--ac);color:#04130e;border-color:var(--ac)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
+.pc:hover{transform:translateY(-4px);border-color:var(--ac)}
+.cover{height:150px;display:grid;place-items:center;font-size:2.6rem;background:linear-gradient(135deg,color-mix(in srgb,var(--ac) 25%,var(--bg2)),color-mix(in srgb,var(--ac2) 25%,var(--bg2)))}
+.pb{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tag{font-size:.72rem;color:var(--ac);text-transform:uppercase;letter-spacing:.08em}
+[dir=rtl] .tag{letter-spacing:0}
+.samp{font-size:.7rem;background:color-mix(in srgb,#f5a524 20%,transparent);color:#f5a524;padding:2px 8px;border-radius:6px;margin-inline-start:8px}
+.pb p{color:var(--mut);font-size:.92rem;flex:1}
+.pb .btn{align-self:flex-start;padding:8px 18px;font-size:.88rem}
+/* certs */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.cert{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.cert small{color:var(--mut)}
+/* contact */
+.cgrid2{display:grid;grid-template-columns:1fr 1.1fr;gap:36px}
+@media(max-width:860px){.cgrid2{grid-template-columns:1fr}}
+.cl{display:grid;gap:12px;margin-bottom:20px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;word-break:break-all}
+form{display:grid;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+label{font-size:.85rem;color:var(--mut);display:block;margin-bottom:4px}
+input,textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--tx);font:inherit}
+input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#ef4444}
+.err{color:#ef4444;font-size:.8rem;min-height:1.1em}
+#st{font-size:.9rem;color:var(--ac)}
+.hp{position:absolute;left:-9999px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mut);font-size:.9rem}
+.fl{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+dialog{background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:var(--r);max-width:560px;width:calc(100% - 32px);padding:26px}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog h3{margin-bottom:8px}dialog p{color:var(--mut);margin:8px 0}dialog b{color:var(--tx)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a href="#main" class="sr" style="position:absolute;left:-9999px">Skip</a>
+<header><div class="wrap"><nav aria-label="Main">
+ <a href="#home" class="logo" id="logo"></a>
+ <div class="links" id="links"></div>
+ <div class="tools">
+  <button class="ib" id="lang" aria-label="Language"></button>
+  <button class="ib" id="theme" aria-label="Toggle theme"></button>
+  <button class="ib" id="burger" aria-expanded="false" aria-controls="links" aria-label="Menu">☰</button>
+ </div>
+</nav></div></header>
+
+<main id="main">
+<section class="hero" id="home"><div class="wrap hgrid">
+ <div>
+  <div class="badge" id="avail"></div>
+  <h1 id="name"></h1>
+  <div class="role" id="role" aria-live="polite"></div>
+  <p class="intro" id="intro"></p>
+  <div class="btns" id="heroBtns"></div>
+  <div class="soc" id="soc"></div>
+ </div>
+ <div class="photo-wrap"><div class="photo" id="photo"></div></div>
+</div><div class="scroll" aria-hidden="true"></div></section>
+
+<section id="about"><div class="wrap" id="aboutBox"></div></section>
+<section id="skills" style="background:var(--bg2)"><div class="wrap" id="skillsBox"></div></section>
+<section id="projects"><div class="wrap" id="projBox"></div></section>
+<section id="certs" style="background:var(--bg2)"><div class="wrap" id="certBox"></div></section>
+<section id="contact"><div class="wrap" id="contactBox"></div></section>
+</main>
+
+<footer><div class="wrap fl"><span id="copy"></span><span id="fsoc"></span><button class="btn" id="top"></button></div></footer>
+<dialog id="dlg"></dialog>
+
+<script>
+/* ============ CONFIG: عدّل هنا بس ============ */
+const CONFIG = {
+  name:{en:"Adham Nasser Said Wahba",ar:"أدهم ناصر سعيد وهبة"},
+  short:"Adham Wahba",
+  initials:"AW",
+  roles:{en:["Data Analyst","Excel & SQL","Python & Power BI"],ar:["محلل بيانات","Excel و SQL","Python و Power BI"]},
+  bio:{
+    en:"Data Analysis student who turns raw data into clear insights that support better decisions. Currently building skills in Excel, SQL, Python and Power BI to analyze data, spot trends and create useful visualizations.",
+    ar:"طالب في مجال تحليل البيانات، بحوّل البيانات الخام لرؤى واضحة تساعد على اتخاذ قرارات أفضل. بطوّر مهاراتي حاليًا في Excel وSQL وPython وPower BI لتحليل البيانات واكتشاف الاتجاهات وعمل تصورات مفيدة."},
+  about:{
+    en:["I am eager to apply what I learn to real-world projects, solve problems with data, and keep improving my analytical and technical skills.","I look forward to gaining practical experience and growing as a Data Analyst."],
+    ar:["متحمس أطبّق اللي بتعلمه على مشاريع حقيقية وأحل مشاكل باستخدام البيانات وأطوّر مهاراتي التحليلية والتقنية باستمرار.","بتطلع لاكتساب خبرة عملية والنمو كمحلل بيانات."]},
+  location:{en:"Maadi, Cairo, Egypt",ar:"المعادي، القاهرة، مصر"},
+  email:"adhamnasser238@gmail.com",
+  phone:"01228874806",
+  photo:"media/WhatsApp Image 2026-10-12 at 2.20.51 PM.jpeg",              // مثال: "assets/adham.jpg"
+  cv:"",                 // مثال: "assets/Adham-CV.pdf"
+  social:{linkedin:"",github:"",behance:"",other:""},  // حط اللينكات هنا وهتظهر لوحدها
+  available:true,
+  skills:[
+    {t:{en:"Core Tools",ar:"الأدوات الأساسية"},items:["Excel","SQL","Python","Power BI"],main:true},
+    {t:{en:"Analysis",ar:"التحليل"},items:{en:["Data Cleaning","Exploratory Analysis","Trend Spotting"],ar:["تنظيف البيانات","التحليل الاستكشافي","اكتشاف الاتجاهات"]}},
+    {t:{en:"Visualization",ar:"التصور"},items:{en:["Dashboards","Charts & Reports"],ar:["لوحات المتابعة","الرسوم والتقارير"]}},
+    {t:{en:"Soft Skills",ar:"مهارات شخصية"},items:{en:["Problem Solving","Curiosity","Clear Communication"],ar:["حل المشكلات","الفضول","وضوح التواصل"]}}
+  ],
+  /* المشاريع: sample:true = شارة "نموذج". لما يبقى مشروع حقيقي خليها false وحط live/code */
+  projects:[
+   {id:"tr",cat:"python",icon:"🌐",sample:true,tools:["Python"],live:"",code:"",
+    title:{en:"Translate Tool",ar:"أداة الترجمة"},
+    desc:{en:"A simple tool that translates text between Arabic and English.",ar:"أداة بسيطة لترجمة النصوص بين العربي والإنجليزي."},
+    role:{en:"Design & development",ar:"التصميم والتطوير"},
+    ch:{en:"Handling text input cleanly and returning readable output.",ar:"التعامل مع النص المدخل بشكل نظيف وإرجاع ناتج مقروء."},
+    sol:{en:"A small script with clear input validation and simple output.",ar:"سكريبت صغير مع تحقق واضح من المدخلات وناتج بسيط."}},
+   {id:"ex",cat:"excel",icon:"💸",sample:true,tools:["Excel","Python"],live:"",code:"",
+    title:{en:"Expense Tracker",ar:"متتبع المصروفات"},
+    desc:{en:"Records daily expenses by category and summarizes where the money goes.",ar:"بيسجل المصروفات اليومية حسب الفئة ويلخص فلوسك بتروح فين."},
+    role:{en:"Data structure & analysis",ar:"هيكلة البيانات والتحليل"},
+    ch:{en:"Organizing expenses into categories that are easy to compare.",ar:"تنظيم المصروفات في فئات سهلة المقارنة."},
+    sol:{en:"Structured table with category totals and a monthly summary view.",ar:"جدول منظم مع إجماليات الفئات وملخص شهري."}},
+   {id:"sd",cat:"powerbi",icon:"📊",sample:true,tools:["Power BI"],live:"",code:"",
+    title:{en:"Sales Dashboard (Concept)",ar:"لوحة المبيعات (فكرة)"},
+    desc:{en:"A dashboard concept showing sales by product, region and month.",ar:"فكرة لوحة متابعة بتعرض المبيعات حسب المنتج والمنطقة والشهر."},
+    role:{en:"Dashboard design",ar:"تصميم اللوحة"},
+    ch:{en:"Choosing visuals that answer business questions quickly.",ar:"اختيار رسومات تجاوب على أسئلة العمل بسرعة."},
+    sol:{en:"Replace with your real dashboard and screenshots.",ar:"استبدلها بلوحتك الحقيقية وصورها."}},
+   {id:"sq",cat:"sql",icon:"🗄️",sample:true,tools:["SQL"],live:"",code:"",
+    title:{en:"Customer Data Analysis (SQL)",ar:"تحليل بيانات العملاء (SQL)"},
+    desc:{en:"SQL queries that group and filter customer data to answer practical questions.",ar:"استعلامات SQL بتجمّع وتفلتر بيانات العملاء للإجابة على أسئلة عملية."},
+    role:{en:"Query writing & analysis",ar:"كتابة الاستعلامات والتحليل"},
+    ch:{en:"Joining tables and cleaning inconsistent values.",ar:"ربط الجداول وتنظيف القيم غير المتسقة."},
+    sol:{en:"Replace with your real queries and findings.",ar:"استبدلها باستعلاماتك ونتايجك الحقيقية."}}
+  ],
+  certs:[]  // مثال: {title:{en:"...",ar:"..."},issuer:"Coursera",date:"2026",url:""}
+};
+/* ============ UI TEXT ============ */
+const T={
+ en:{home:"Home",about:"About",skills:"Skills",projects:"Projects",certs:"Certificates",contact:"Contact",hire:"Let's Work Together",view:"View My Work",cv:"Download CV",avail:"Available for Opportunities",
+  ab_s:"About me",ab_t:"Data with a purpose",loc:"Location",foc:"Focus",focv:"Data Analysis",st:"Status",stv:"Student, building real projects",
+  sk_s:"Skills",sk_t:"Tools I work with",sk_d:"Skills I'm actively learning and practicing.",
+  pr_s:"Projects",pr_t:"Selected work",pr_d:"Sample projects that show how I approach data. They will be replaced with real work.",all:"All",samp:"Sample",det:"View Details",none:"Link coming soon",
+  tools:"Tools",role:"My role",ch:"Challenge",sol:"Approach",close:"Close",
+  ce_s:"Certificates",ce_t:"Learning milestones",
+  co_s:"Contact",co_t:"Let's talk about data",co_d:"Have a project, an opportunity or a question? Send a message.",
+  copy:"Copy",copied:"Copied!",n:"Name",e:"Email",s:"Subject",m:"Message",send:"Send message",
+  r:"This field is required",ie:"Enter a valid email",ok:"Opening your email app...",top:"Back to top",rights:"All rights reserved."},
+ ar:{home:"الرئيسية",about:"عني",skills:"المهارات",projects:"المشاريع",certs:"الشهادات",contact:"تواصل",hire:"خلينا نشتغل سوا",view:"شوف أعمالي",cv:"تحميل السيرة الذاتية",avail:"متاح لفرص العمل",
+  ab_s:"عني",ab_t:"بيانات بهدف",loc:"المكان",foc:"التخصص",focv:"تحليل البيانات",st:"الحالة",stv:"طالب وبعمل مشاريع حقيقية",
+  sk_s:"المهارات",sk_t:"الأدوات اللي بشتغل بيها",sk_d:"مهارات بتعلمها وبتدرب عليها بشكل مستمر.",
+  pr_s:"المشاريع",pr_t:"أعمال مختارة",pr_d:"مشاريع نموذجية بتوضح طريقتي في التعامل مع البيانات، وهتتبدل بأعمال حقيقية.",all:"الكل",samp:"نموذج",det:"عرض التفاصيل",none:"الرابط قريبًا",
+  tools:"الأدوات",role:"دوري",ch:"التحدي",sol:"الأسلوب",close:"إغلاق",
+  ce_s:"الشهادات",ce_t:"محطات التعلم",
+  co_s:"تواصل",co_t:"خلينا نتكلم عن البيانات",co_d:"عندك مشروع أو فرصة أو سؤال؟ ابعتلي رسالة.",
+  copy:"نسخ",copied:"تم النسخ!",n:"الاسم",e:"الإيميل",s:"الموضوع",m:"الرسالة",send:"إرسال الرسالة",
+  r:"الحقل ده مطلوب",ie:"اكتب إيميل صحيح",ok:"جاري فتح تطبيق الإيميل...",top:"للأعلى",rights:"جميع الحقوق محفوظة."}
+};
+/* ============ APP ============ */
+const $=s=>document.querySelector(s),C=CONFIG,root=document.documentElement;
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+let lang=store.get("lang")||"en",theme=store.get("theme")||"dark",flt="all",rIdx=0,rTimer;
+const pick=(o)=>o&&typeof o==="object"&&!Array.isArray(o)?o[lang]:o;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const mail="mailto:"+C.email, tel="tel:"+C.phone.replace(/\s/g,"");
+
+function applyMode(){
+ root.lang=lang;root.dir=lang==="ar"?"rtl":"ltr";root.dataset.theme=theme;
+ $("#lang").textContent=lang==="ar"?"EN":"عربي";
+ $("#theme").textContent=theme==="dark"?"☀":"☾";
+}
+function socials(){
+ const m={linkedin:"LinkedIn",github:"GitHub",behance:"Behance",other:"Link"};
+ return Object.entries(C.social).filter(([,v])=>v).map(([k,v])=>`<a href="${esc(v)}" target="_blank" rel="noopener noreferrer">${m[k]}</a>`).join("");
+}
+function render(){
+ const t=T[lang];applyMode();
+ document.title=`${pick(C.name)} | ${lang==="ar"?"محلل بيانات":"Data Analyst"}`;
+ $("#logo").innerHTML=`${esc(C.short)}<span>.</span>`;
+ const nav=[["about","about"],["skills","skills"],["projects","projects"]];
+ if(C.certs.length)nav.push(["certs","certs"]);nav.push(["contact","contact"]);
+ $("#links").innerHTML=`<a class="l" href="#home">${t.home}</a>`+nav.map(([id,k])=>`<a class="l" href="#${id}">${t[k]}</a>`).join("")+`<a class="btn pri cta-nav" href="#contact" style="padding:8px 18px;margin-inline-start:8px">${t.hire}</a>`;
+ $("#avail").innerHTML=C.available?`<span class="dot"></span>${t.avail}`:"";$("#avail").style.display=C.available?"inline-flex":"none";
+ $("#name").textContent=pick(C.name);$("#intro").textContent=pick(C.bio);
+ $("#heroBtns").innerHTML=`<a class="btn pri" href="#projects">${t.view}</a>`+(C.cv?`<a class="btn" href="${esc(C.cv)}" download>${t.cv}</a>`:"")+`<a class="btn" href="#contact">${t.hire}</a>`;
+ $("#soc").innerHTML=socials();
+ $("#photo").innerHTML=C.photo?`<img src="${esc(C.photo)}" alt="${esc(pick(C.name))}" width="480" height="600" fetchpriority="high">`:`<div class="ph"><b>${C.initials}</b>Profile photo placeholder<br>(set CONFIG.photo)</div>`;
+ const img=$("#photo img");if(img)img.onerror=()=>{$("#photo").innerHTML=`<div class="ph"><b>${C.initials}</b>Photo not found</div>`};
+ // about
+ $("#aboutBox").innerHTML=`<div class="rv"><div class="eyebrow">${t.ab_s}</div><h2>${t.ab_t}</h2></div>
+  <div class="agrid rv" style="margin-top:24px"><div>${pick(C.about).map(p=>`<p>${esc(p)}</p>`).join("")}</div>
+  <div class="facts"><div class="fact"><small>${t.loc}</small>${esc(pick(C.location))}</div><div class="fact"><small>${t.foc}</small>${t.focv}</div><div class="fact"><small>${t.st}</small>${t.stv}</div></div></div>`;
+ // skills
+ $("#skillsBox").innerHTML=`<div class="rv"><div class="eyebrow">${t.sk_s}</div><h2>${t.sk_t}</h2><p class="sub">${t.sk_d}</p></div>
+  <div class="sgrid rv">${C.skills.map(g=>`<div class="sk"><h3>${esc(pick(g.t))}</h3><div class="chips">${(Array.isArray(g.items)?g.items:pick(g.items)).map(i=>`<span class="chip ${g.main?"main":""}">${esc(i)}</span>`).join("")}</div></div>`).join("")}</div>`;
+ // projects
+ const cats=["all",...new Set(C.projects.map(p=>p.cat))];
+ const cn={all:t.all,python:"Python",sql:"SQL",powerbi:"Power BI",excel:"Excel"};
+ const list=C.projects.filter(p=>flt==="all"||p.cat===flt);
+ $("#projBox").innerHTML=`<div class="rv"><div class="eyebrow">${t.pr_s}</div><h2>${t.pr_t}</h2><p class="sub">${t.pr_d}</p></div>
+  <div class="filters" role="group" aria-label="Filter">${cats.map(c=>`<button data-c="${c}" aria-pressed="${c===flt}">${cn[c]||c}</button>`).join("")}</div>
+  <div class="pgrid">${list.map(p=>`<article class="pc rv"><div class="cover" aria-hidden="true">${p.icon}</div><div class="pb">
+   <div><span class="tag">${cn[p.cat]||p.cat}</span>${p.sample?`<span class="samp">${t.samp}</span>`:""}</div>
+   <h3>${esc(pick(p.title))}</h3><p>${esc(pick(p.desc))}</p><div class="chips">${p.tools.map(x=>`<span class="chip">${x}</span>`).join("")}</div>
+   <button class="btn" data-p="${p.id}">${t.det}</button></div></article>`).join("")}</div>`;
+ // certs
+ const cs=$("#certs");cs.style.display=C.certs.length?"":"none";
+ $("#certBox").innerHTML=C.certs.length?`<div class="rv"><div class="eyebrow">${t.ce_s}</div><h2>${t.ce_t}</h2></div><div class="cgrid rv" style="margin-top:24px">${C.certs.map(c=>`<div class="cert"><h3 style="font-size:1rem">${esc(pick(c.title))}</h3><small>${esc(c.issuer||"")} ${esc(c.date||"")}</small>${c.url?`<br><a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer" style="color:var(--ac)">↗</a>`:""}</div>`).join("")}</div>`:"";
+ // contact
+ $("#contactBox").innerHTML=`<div class="rv"><div class="eyebrow">${t.co_s}</div><h2>${t.co_t}</h2><p class="sub">${t.co_d}</p></div>
+  <div class="cgrid2 rv"><div><div class="cl">
+   <div class="row"><a href="${mail}">${esc(C.email)}</a><button class="btn" id="cp" style="padding:6px 14px;font-size:.8rem">${t.copy}</button></div>
+   <div class="row"><a href="${tel}" dir="ltr">${esc(C.phone)}</a></div>
+   <div class="row">${esc(pick(C.location))}</div></div><div class="soc">${socials()}</div></div>
+  <form id="f" novalidate><div class="hp" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
+   ${[["n","text","name"],["e","email","email"],["s","text","subject"]].map(([k,ty,id])=>`<div><label for="${id}">${t[k]}</label><input id="${id}" type="${ty}" aria-describedby="${id}E"><div class="err" id="${id}E" role="alert"></div></div>`).join("")}
+   <div><label for="message">${t.m}</label><textarea id="message" rows="5" aria-describedby="messageE"></textarea><div class="err" id="messageE" role="alert"></div></div>
+   <button class="btn pri" type="submit" id="sb">${t.send}</button><div id="st" role="status" aria-live="polite"></div></form></div>`;
+ $("#copy").textContent=`© ${new Date().getFullYear()} ${pick(C.name)}. ${t.rights}`;
+ $("#top").textContent="↑ "+t.top;
+ bind();reveal();spy();roles();
+}
+function roles(){
+ clearInterval(rTimer);const r=pick(C.roles),el=$("#role");rIdx=0;el.textContent=r[0];
+ if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+ rTimer=setInterval(()=>{el.classList.add("f");setTimeout(()=>{rIdx=(rIdx+1)%r.length;el.textContent=r[rIdx];el.classList.remove("f")},350)},2600);
+}
+function reveal(){
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
+ document.querySelectorAll(".rv").forEach(n=>io.observe(n));
+}
+let spyIO;
+function spy(){
+ if(spyIO)spyIO.disconnect();
+ spyIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll(".links a.l").forEach(a=>a.classList.toggle("act",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+ document.querySelectorAll("section[id]").forEach(s=>spyIO.observe(s));
+}
+function bind(){
+ document.querySelectorAll(".filters button").forEach(b=>b.onclick=()=>{flt=b.dataset.c;render();location.hash="#projects"});
+ document.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>openP(b.dataset.p));
+ document.querySelectorAll(".links a").forEach(a=>a.onclick=()=>closeMenu());
+ $("#cp").onclick=async e=>{try{await navigator.clipboard.writeText(C.email);e.target.textContent=T[lang].copied;setTimeout(()=>e.target.textContent=T[lang].copy,1600)}catch(x){location.href=mail}};
+ $("#f").onsubmit=submit;
+}
+function openP(id){
+ const p=C.projects.find(x=>x.id===id),t=T[lang],d=$("#dlg");
+ const lk=(u,l)=>u?`<a class="btn" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${l}</a>`:`<span class="btn" aria-disabled="true">${l}: ${t.none}</span>`;
+ d.innerHTML=`<h3>${esc(pick(p.title))}${p.sample?`<span class="samp">${t.samp}</span>`:""}</h3><p>${esc(pick(p.desc))}</p>
+  <p><b>${t.tools}:</b> ${p.tools.join(", ")}</p><p><b>${t.role}:</b> ${esc(pick(p.role))}</p><p><b>${t.ch}:</b> ${esc(pick(p.ch))}</p><p><b>${t.sol}:</b> ${esc(pick(p.sol))}</p>
+  <div class="btns" style="margin-top:16px">${lk(p.live,"Live")}${lk(p.code,"Code")}<button class="btn pri" id="cl">${t.close}</button></div>`;
+ d.showModal();$("#cl").onclick=()=>d.close();
+}
+$("#dlg").addEventListener("click",e=>{if(e.target.id==="dlg")e.target.close()});
+function submit(e){
+ e.preventDefault();const t=T[lang];let ok=true;
+ const v={name:$("#name").value||"",};
+ const f={name:$("#f #name"),email:$("#f #email"),subject:$("#f #subject"),message:$("#f #message")};
+ Object.entries(f).forEach(([k,el])=>{
+  const val=el.value.trim(),er=$("#"+k+"E");let m="";
+  if(!val)m=t.r;else if(k==="email"&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val))m=t.ie;
+  er.textContent=m;el.setAttribute("aria-invalid",!!m);if(m)ok=false;
+ });
+ if(!ok||e.target.website.value)return;
+ $("#st").textContent=t.ok;
+ const body=`${f.message.value}\n\n— ${f.name.value} (${f.email.value})`;
+ location.href=`${mail}?subject=${encodeURIComponent(f.subject.value)}&body=${encodeURIComponent(body)}`;
+}
+function closeMenu(){$("#links").classList.remove("open");$("#burger").setAttribute("aria-expanded","false")}
+$("#burger").onclick=()=>{const o=$("#links").classList.toggle("open");$("#burger").setAttribute("aria-expanded",o)};
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu()});
+$("#lang").onclick=()=>{lang=lang==="en"?"ar":"en";store.set("lang",lang);render()};
+$("#theme").onclick=()=>{theme=theme==="dark"?"light":"dark";store.set("theme",theme);applyMode()};
+$("#top").onclick=()=>scrollTo({top:0,behavior:"smooth"});
+render();
+</script>
+</body>
+</html>
